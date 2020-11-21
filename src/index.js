@@ -28,7 +28,7 @@ const getBooksAndMoviesAsync = async () => {
 };
 
 async function getBooksOrMoviesAsync() {
-  const values = await Promise.race([asyncFetchBooks(), asyncFetchMovies()]);
+  const values = await Promise.race([asyncFetchBookss(), asyncFetchMovies()]);
   return values;
 };
 
@@ -40,6 +40,7 @@ getBooksAndMoviesPromise.then(results => { console.log("getBooksAndMoviesPromise
 const getBooksOrMoviesPromise = getBooksOrMovies();
 getBooksOrMoviesPromise.then(results => { console.log("getBooksOrMoviesPromise", results); });
 
+
 getBooksAndMoviesAsync()
   .then(results => {
     console.log("movies and books", {
@@ -50,7 +51,7 @@ getBooksAndMoviesAsync()
   .catch(error => {
     console.error("Error in getBooksAndMoviesAsync execution", error);
   });
-
+/*
 getBooksOrMoviesAsync()
   .then(results => {
     console.log("movies OR books", {
@@ -60,3 +61,4 @@ getBooksOrMoviesAsync()
   .catch(error => {
     console.error("Error in getBooksOrMoviesAsync execution", error);
   });
+*/
