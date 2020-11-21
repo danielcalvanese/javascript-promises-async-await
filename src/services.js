@@ -21,7 +21,7 @@ export async function asyncFetchMovies() {
     return results;
   }
   catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 }
 
@@ -44,6 +44,6 @@ export async function asyncFetchBooks() {
     return results;
   }
   catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 }
