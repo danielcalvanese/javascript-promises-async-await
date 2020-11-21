@@ -9,13 +9,6 @@ export function fetchMovies() {
     .catch(error => console.log(error));
 }
 
-export function fetchBooks() {
-  return fetch("./data/books.json")
-    .then(response => response.json())
-    .then(books => books)
-    .catch(error => console.log(error));
-}
-
 export async function asyncFetchMovies() {
   try {
     // Fetch movies.
@@ -30,6 +23,13 @@ export async function asyncFetchMovies() {
   catch (error) {
     console.log(error);
   }
+}
+
+export function fetchBooks() {
+  return fetch("./data/books.json")
+    .then(response => response.json())
+    .then(books => books)
+    .catch(error => console.log(error));
 }
 
 export async function asyncFetchBooks() {
