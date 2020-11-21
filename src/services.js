@@ -47,3 +47,7 @@ export async function asyncFetchBooks() {
     //console.log(error);
   }
 }
+
+export async function asyncFetchBookss() {
+  throw new Error("test error.");
+}
